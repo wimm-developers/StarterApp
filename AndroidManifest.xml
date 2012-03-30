@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2012 WIMM Labs Incorporated -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:wimm="http://schemas.wimm.com/android"
+      package="com.test.starterapp"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="7" />
+
+    <application android:icon="@drawable/icon" 
+                 android:label="@string/app_name">
+        <uses-library android:name="com.wimm.framework" 
+              wimm:minSdkVersion="1.0.2" />
+        <activity android:name=".StarterAppActivity"
+                  android:label="@string/app_name">
+        <meta-data android:name="com.wimm.app.peekview" 
+                       android:resource="@layout/peekview" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
